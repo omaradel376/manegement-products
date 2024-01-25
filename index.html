@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Manegement products</title>
+    <link rel="icon" href="./logo_transparent.png">
+  </head>
+  <body>
+    <div class="title">
+      <h1>cruds</h1>
+      <p>manegement products</p>
+    </div>
+
+    <div class="container">
+      <div class="inputs">
+        <input type="text" name="title" id="title" placeholder="title" />
+        <div class="price-product">
+          <input
+            onkeyup="handleTotal()"
+            type="number"
+            name="price"
+            id="price"
+            placeholder="price"
+          />
+          <input
+            onkeyup="handleTotal()"
+            type="number"
+            name="taksas"
+            id="taksas"
+            placeholder="taksas"
+          />
+          <input
+            onkeyup="handleTotal()"
+            type="number"
+            name="ads"
+            id="ads"
+            placeholder="ads"
+          />
+          <input
+            onkeyup="handleTotal()"
+            type="number"
+            name="discount"
+            id="discount"
+            placeholder="discount"
+          />
+          <div class="total">total: <span></span></div>
+        </div>
+        <input type="number" name="count" id="count" placeholder="count" />
+        <input
+          type="text"
+          name="category"
+          id="category"
+          placeholder="category"
+        />
+      </div>
+      <button id="submit">create</button>
+      <button id="deleteAll">Delete All</button>
+
+      <div class="search">
+        <div class="search-title">
+          <input
+            id="search-by-title"
+            type="text"
+            placeholder="search by title"
+          />
+          <button id="button-search">search by title</button>
+        </div>
+
+        <div class="search-category">
+          <input
+            id="search-by-category"
+            type="text"
+            placeholder="search by category"
+          />
+          <button id="button-category">search by category</button>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <th>ID</th>
+          <th>Title</th>
+          <th>price</th>
+          <th>taksas</th>
+          <th>ads</th>
+          <th>discount</th>
+          <th>total</th>
+          <th>category</th>
+          <th>count</th>
+          <th colspan="2">option</th>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
